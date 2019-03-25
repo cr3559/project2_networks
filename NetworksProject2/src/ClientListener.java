@@ -19,20 +19,17 @@ public class ClientListener  implements Runnable
 		{
 			try 
 			{
+				Scanner scanner = new Scanner(socket.getInputStream());
+				char delimiterChar = (char) 255;
+				String stringDelimiter = new StringBuilder().append(delimiterChar).toString();
 				
-				synchronized(this)
-				{
+				scanner = scanner.useDelimiter(stringDelimiter);
+
 				//while(true)// Added this while loop to get C code to run
 				{
-					Reader reader = new InputStreamReader(socket.getInputStream());
-					
-					//Reads input Stream of server
-					Scanner scanner = new Scanner(socket.getInputStream());
-					
-					//the message to send back to the client
 					if(scanner.hasNext())
 					{
-						String message = scanner.nextLine();
+						String message = scanner.next();
 						
 						if(verifyCheckSum(message))
 						{
@@ -46,7 +43,7 @@ public class ClientListener  implements Runnable
 					} 
 					this.socket.close();
 				}
-				}
+				
 			}
 			catch (IOException e) 
 			{

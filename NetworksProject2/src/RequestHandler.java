@@ -91,54 +91,194 @@ String routerTable;
 
 		char source = message.charAt(0);
 		char destination = message.charAt(1);
-		
-		if(source == '1')
+		for(DataHolder dataHolder: list)
 		{
-			switch(destination)
+			if(dataHolder.source.equals(source) && dataHolder.destination.equals(destination))
 			{
-				case '2':
-					for(DataHolder dataHolder: list)
-					{
-						if(dataHolder.source.equals("1") && dataHolder.destination.equals("2"))
-						{
-							DataHolder destinationData = dataHolder;
-							return destinationData.address;
-						}
-					}
-				case '3':
-					for(DataHolder dataHolder: list)
-					{
-						if(dataHolder.source.equals("1") && dataHolder.destination.equals("3"))
-						{
-							DataHolder destinationData = dataHolder;
-							return destinationData.address;
-						}
-					}
-				case '4':
-					for(DataHolder dataHolder: list)
-					{
-						if(dataHolder.source.equals("1") && dataHolder.destination.equals("4"))
-						{
-							DataHolder destinationData = dataHolder;
-							return destinationData.address;
-						}
-					}
-				case '1':
-					for(DataHolder dataHolder: list)
-					{
-						if(dataHolder.source.equals("1") && dataHolder.destination.equals("1"))
-						{
-							DataHolder destinationData = dataHolder;
-							return destinationData.address;
-						}
-					}
+				DataHolder destinationData = dataHolder;
+				return destinationData.address;
 			}
-					
 		}
-		
 		return null;
 	}
-	
+//		
+//		if(source == '1')
+//		{
+//			switch(destination)
+//			{
+//				case '2':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("1") && dataHolder.destination.equals("2"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '3':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("1") && dataHolder.destination.equals("3"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '4':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("1") && dataHolder.destination.equals("4"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '1':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("1") && dataHolder.destination.equals("1"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//					
+//			}
+//					
+//		}
+//		
+//		else if(source == '2')
+//		{
+//			switch(destination)
+//			{
+//				case '1':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("2") && dataHolder.destination.equals("1"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '2':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("2") && dataHolder.destination.equals("2"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '3':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("2") && dataHolder.destination.equals("3"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '4':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("2") && dataHolder.destination.equals("4"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//					
+//			}
+//		}
+//		else if(source == '3')
+//		{
+//			switch(destination)
+//			{
+//				case '1':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("3") && dataHolder.destination.equals("1"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '2':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("3") && dataHolder.destination.equals("2"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '3':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("3") && dataHolder.destination.equals("3"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '4':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("3") && dataHolder.destination.equals("4"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//			
+//		
+//			}
+//		}
+//		else if(source == '4')
+//		{
+//			switch(destination)
+//			{
+//				case '1':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("4") && dataHolder.destination.equals("1"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '2':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("4") && dataHolder.destination.equals("2"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '3':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("4") && dataHolder.destination.equals("3"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//				case '4':
+//					for(DataHolder dataHolder: list)
+//					{
+//						if(dataHolder.source.equals("4") && dataHolder.destination.equals("4"))
+//						{
+//							DataHolder destinationData = dataHolder;
+//							return destinationData.address;
+//						}
+//					}
+//			}
+//		}
+//		return message;
+//	}
+//	
 	
 	public boolean verifyCheckSum(String message)
 	{

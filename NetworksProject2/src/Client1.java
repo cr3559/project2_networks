@@ -59,10 +59,9 @@ public class Client1 implements Runnable
 	            
 	            Thread thread = new Thread(new ClientListener(serverSocket.accept()));
 	            thread.start();
+	           
 	            
-	            
-	            
-	            //Thread.sleep(1000);
+	            Thread.sleep(1000);
         	}
         	
         	clientSocket.close();
